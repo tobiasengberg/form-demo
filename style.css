@@ -1,0 +1,56 @@
+
+
+body {
+    background-color: hsl(0, 0%, 86%);
+}
+#site-container{
+    background-color: hsl(0, 0%, 98%);
+    width: 800px;
+    margin: auto;
+    padding: 1rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.1rem;
+}
+
+form div {
+    padding: .5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+input {
+    font-size: 1.1rem;
+
+}
+
+select {
+    width: 160px;
+}
+
+label {
+    padding-right: .5rem;
+}
+
+.one-column {
+    grid-column: span 2;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.one-column label {
+    padding: .5rem 0;
+}
+
+input[type=submit] {
+    padding: .5rem;
+    width: 150px;
+    background-color: rgb(13, 151, 15);
+    color: white;
+    border: none;
+}

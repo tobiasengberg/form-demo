@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form demo</title>
+</head>
+<body>
+    <div id="site-container">
+        <form action="" method="post">
+            <div >
+                <label for="firstname">First name:</label>
+                <input type="text" name="firstname" id="firstname">
+            </div>
+            <div >
+                <label for="lastname">Last name:</label>
+                <input type="text" name="lastname" id="lastname">
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address">
+            </div>
+
+            <div>
+                <label for="city">City:</label>
+                <select name="city" id="city">
+                    <option value="Stockholm">Stockholm</option>
+                    <option value="Göteborg">Göteborg</option>
+                    <option value="Malmö">Malmö</option>
+                    <option value="Uppsala">Uppsala</option>
+                    <option value="Eskilstuna">Eskilstuna</option>
+                </select>
+            </div>
+            <div class="one-column">
+                <label for="">
+                <input type="checkbox" name="interest1" id="interest1" value="technology">
+                Technology
+                </label>
+                <label for="">
+                <input type="checkbox" name="interest1" id="interest2" value="environment">
+                Environment
+                </label>
+                <label for="">
+                <input type="checkbox" name="interest1" id="interest3" value="management">
+                Management
+                </label>
+                <label for="">
+                <input type="checkbox" name="interest1" id="interest4" value="operations">
+                Operations
+                </label>
+            </div>
+            <div class="one-column">
+                <p>As default, we will treat each applicant as a private submission. Indicate otherwise.</p>
+            </div>
+            <div class="one-column">
+                <label for="">
+                    <input type="radio" name="visibility" id="" value="public">
+                    Public
+                </label>
+                <label for="">
+                    <input type="radio" name="visibility" id="" value="private">
+                    Private
+                </label>
+            </div>
+            <div class="one-column">
+                <label for="">
+                    <input type="checkbox" name="terms" value="recognized">
+                    Check the box if you have read and agrees with our terms of service.
+                </label>
+            </div>
+            <div class="one-column">
+                <input type="file" name="letter" id="">
+            </div>
+            <div class="one-column">
+                <input type="submit" value="Submit">
+            </div>
+            <!-- <div>
+                <input type="range" name="" min="100" max="200" step="10" id="">
+            </div> -->
+        </form>
+
+    </div>
+    
+</body>
+</html>
