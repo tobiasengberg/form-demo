@@ -1,0 +1,123 @@
+:root {
+    --color-key: 1;
+    --primary-color1: hsl(var(--color-key), 40%, 26%);
+    --primary-color2: hsl(var(--color-key), 30%, 40%);
+    --primary-color3: hsl(var(--color-key), 20%, 54%);
+    --primary-color4: hsl(var(--color-key), 25%, 67%);
+    --primary-color5: hsl(var(--color-key), 40%, 78%);
+    --primary-color6: hsl(var(--color-key), 65%, 88%);
+    --primary-color7: hsl(var(--color-key), 80%, 94%);
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "info"
+    "img"
+    "."
+    "."
+    "."
+    "."
+    "."
+    "foot";
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+img {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+header {
+    grid-area: info;
+    background-color: var(--primary-color1);
+    color: white;
+}
+
+img {
+    grid-area: img;
+    aspect-ratio: unset;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+footer {
+    grid-area: foot;
+    background-color: var(--primary-color7);
+}
+
+#article-politics {
+    background-color: var(--primary-color2);
+    color: var(--primary-color6)
+}
+
+#article-culture {
+    background-color: var(--primary-color3);
+}
+
+#article-education {
+    background-color: var(--primary-color4);
+}
+
+#article-local {
+    background-color: var(--primary-color5);
+}
+
+#article-sports {
+    background-color: var(--primary-color6);
+}
+
+@media screen and (min-width: 900px) {
+    body {
+
+        column-gap: .5rem;
+        row-gap: 1.5rem;
+        grid-auto-flow: row dense;
+        grid-template-columns: repeat(4, 260px);
+        grid-template-rows: auto auto auto;;
+        grid-template-areas: 
+        "img img  info ."
+        ".  . info . "
+        "foot . . .";
+    }
+
+    img {
+        height: 100%;
+    }
+
+    .two-column {
+        grid-column: span 2;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    body {
+
+        column-gap: .5rem;
+        row-gap: 1.5rem;
+        grid-auto-flow: row dense;
+        grid-template-columns: repeat(6, 260px);
+        grid-template-rows: auto auto auto;;
+        grid-template-areas: 
+        "info . . img img img"
+        "foot foot . . . ."
+        "foot foot . . . .";
+    }
+
+    
+    .two-column {
+        grid-column: span 2;
+    }
+}
+

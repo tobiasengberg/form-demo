@@ -1,33 +1,49 @@
+:root * {
+    box-sizing: border-box;
+}
+h1 {
+    color: blue;
+}
 
+
+.footer {
+    width: 100%;
+    padding: 200px;
+    border: 50px solid red;
+    
+}
+
+.footer h2 {
+    background-color: blue;
+}
 
 body {
     background-color: hsl(0, 0%, 86%);
+    width: 100vw;
 }
 #site-container{
     background-color: hsl(0, 0%, 98%);
-    width: 800px;
+    width: 100%;    /* absolute value       */
     margin: auto;
     padding: 1rem;
 }
 
 form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 1.1rem;
+    font-size: 6vw;
 }
 
 form div {
     padding: .5rem;
-    display: flex;
-    justify-content: flex-end;
+    display: flex;   /* flex-direction    */
+    justify-content: flex-end; 
+    flex-direction: column;
 }
 input {
-    font-size: 1.1rem;
-
+    font-size: 6vw;
 }
 
 select {
-    width: 160px;
+    width: 100%;   /* absolute value   */
 }
 
 label {
@@ -35,12 +51,8 @@ label {
 }
 
 .one-column {
-    grid-column: span 2;
-    width: 400px;
-    margin: auto;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 
 .one-column label {
@@ -49,8 +61,54 @@ label {
 
 input[type=submit] {
     padding: .5rem;
-    width: 150px;
+    width: 200px;    /* absolute value   */
     background-color: rgb(13, 151, 15);
     color: white;
     border: none;
+}
+
+@media screen and (min-width: 620px) {
+    h1 {
+        color: green;
+    }
+
+    #site-container{
+        width: 620px;    /* absolute value       */
+        margin: auto;
+        padding: 1rem;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Multi column      */
+        font-size: 1.1rem;
+    }
+
+    form div {
+        padding: .5rem;
+        display: flex;   /* flex-direction    */
+        justify-content: flex-end; 
+        flex-direction: row;
+    }
+
+    select {
+        width: 160px;   /* absolute value   */
+    }
+
+    input {
+        font-size: 1.1rem;
+    }
+    .one-column {
+        grid-column: span 2;  /* column layout    */
+        width: 400px;   /*  absolute value     */
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    input[type=submit] {
+        padding: .5rem;
+        width: 150px;    /* absolute value   */
+    }
 }
